@@ -56,8 +56,6 @@ public class FileUtilsTest {
     @Test
     @DisplayName("Writing to file at wrong address.")
     public void testWriteToFileWrongAddress() {
-        Assertions.assertThrows(IOException.class, ()->{
-            FileUtil.writeLinesToFile(tempDir.toString(), teslList);
-        });
+        Assertions.assertThrows(IOException.class, ()-> FileUtil.writeLinesToFile(tempDir.toString(), teslList));
     }
 }
